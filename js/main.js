@@ -161,6 +161,7 @@ function hideFilter() {
     filterContainer.classList.add("opacity-0");
   }
   filterContainer.setAttribute("aria-hidden", "true");
+  clearButton.tabIndex = -1;
 }
 
 function showFilter() {
@@ -169,6 +170,7 @@ function showFilter() {
   filterContainer.classList.remove("opacity-0");
   filterContainer.classList.add("opacity-100");
   filterContainer.setAttribute("aria-hidden", "false");
+  clearButton.tabIndex = 0;
 }
 
 function animateCard(element, index) {

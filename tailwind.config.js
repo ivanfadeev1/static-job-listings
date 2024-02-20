@@ -29,7 +29,6 @@ module.exports = {
     screens: {
       sm: "576px",
       md: "800px",
-      // lg: "1024px",
     },
   },
   plugins: [],
