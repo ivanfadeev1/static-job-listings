@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="#" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+    <title>Job Listings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body class="bg-greenBg text-greenDark before:bg-greenDark before:bg-bgHeaderDesktop min-h-screen font-bold before:absolute before:-z-10 before:h-[156px] before:w-full before:bg-right">
+    <main>
+      <section>
+        <h1 class="visually-hidden">Job Listings</h1>
+        <div class="mb-14 pt-[120px] sm:mb-10" id="filter-section">
+          <div class="mx-auto max-w-[1158px] px-6">
+            <div class="flex min-h-[72px] justify-between gap-x-8 rounded-[5px] bg-white py-5 pl-[19px] pr-[25px] opacity-0 shadow duration-100 sm:px-10" aria-hidden="true" id="filter">
+              <ul class="flex flex-wrap gap-4 tracking-tight"></ul>
+              <button class="text-gray hover:text-greenDark text-base tracking-tight transition-colors duration-200 hover:underline">Clear</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="mx-auto max-w-[1158px] px-6 pb-6 sm:pb-24">
+            <ul id="card-list"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <template id="card-template">
+      <li class="relative mb-10 rounded-[5px] bg-white p-6 pt-8 shadow sm:mb-6 sm:px-10 sm:pb-[31px] md:flex md:items-start md:gap-x-10">
+        <span class="bg-greenDark absolute left-0 top-0 h-full w-[5px] rounded-l-[5px]" data-highlight></span>
+        <div class="max-md:border-grayLight mb-4 pb-[15px] max-md:border-b sm:mb-6 sm:flex sm:pb-[23px] md:mb-0 md:mr-auto md:shrink-0 md:pb-0">
+          <img class="-top-6 left-6 w-12 max-sm:absolute sm:mr-6 sm:w-[88px]" src="img/photosnap.svg" alt="" width="88" height="88" data-logo />
+          <div>
+            <div class="mb-[9px] flex min-h-6 sm:mb-[10px]">
+              <h3 class="mr-7 pt-[7px] text-[13px]/[12px] sm:mr-4 sm:pt-[3px] sm:text-lg/[17px]" data-company>Photosnap</h3>
+              <span class="bg-greenDark mr-2 rounded-full px-2 pb-[3px] pt-[7px] text-sm/[14px] uppercase tracking-[-0.11px] text-white" data-new>NEW!</span>
+              <span class="rounded-full bg-black px-2 pb-[3px] pt-[7px] text-sm/[14px] uppercase tracking-[-0.11px] text-white" data-featured>FEATURED</span>
+            </div>
+            <h2 class="hover:text-greenDark mb-2 text-[15px]/[24px] text-black transition-colors duration-200 sm:mb-[7px] sm:text-[22px]">
+              <a href="#" data-position>Senior Frontend Developer</a>
+            </h2>
+            <ul class="text-gray flex items-start gap-x-[10px] font-medium tracking-[-0.12px] sm:gap-x-4 sm:text-lg/[24px] sm:tracking-[-0.14px]">
+              <li data-posted-at>1d ago</li>
+              <span class="bg-grayLight mt-[9px] block h-1 w-1 rounded-full"></span>
+              <li data-contract>Full Time</li>
+              <span class="bg-grayLight mt-[9px] block h-1 w-1 rounded-full"></span>
+              <li data-location>USA Only</li>
+            </ul>
+          </div>
+        </div>
+        <ul class="flex flex-wrap gap-4 md:justify-end md:self-center" data-tag-list></ul>
+      </li>
+    </template>
+    <template id="card-tag-template">
+      <li><button class="bg-green10 hover:bg-greenDark rounded px-2 pb-[3px] pt-[5px] tracking-tight duration-200 hover:text-white">HTML</button></li>
+    </template>
+    <template id="filter-tag-template">
+      <li class="flex rounded">
+        <span class="bg-green10 rounded-l px-2 pb-[3px] pt-[5px]">Frontend</span>
+        <button class="bg-greenDark w-8 rounded-r duration-200 hover:bg-black">
+          <img class="mx-auto" src="img/icon-remove.svg" alt="Remove icon" width="14" height="14" />
+        </button>
+      </li>
+    </template>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

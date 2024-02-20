@@ -1,0 +1,27 @@
+.hiddenn {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@keyframes card {
+  0% {
+    transform: translateY(-16px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animation-card {
+  animation: card 0.25s ease-out;
+  animation-fill-mode: forwards;
+}
